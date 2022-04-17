@@ -1,0 +1,14 @@
+.modal-dialog(role='document')
+  .modal-content
+    .modal-header
+      h5.modal-title Add Favorite
+      button.close(type='button' data-dismiss='modal' aria-label='Close')
+        span(aria-hidden='true') ×
+    form.modal-body
+      .form-group
+        label Name
+        input.form-control(type="text" name = "name")
+      .form-group
+        label Account ID
+        input.form-control(type="text" name = "accountId")
+      button.btn.btn-primary(type='submit') Submit

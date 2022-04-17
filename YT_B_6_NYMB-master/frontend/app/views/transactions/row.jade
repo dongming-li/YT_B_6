@@ -1,0 +1,12 @@
+tr(data-id=data.id)
+  td #{data.fromId}
+  td #{data.toId}
+  td #{data.currencyId}
+  td #{data.amount}
+  td #{data.created}
+  td.text-center
+    if accountId == data.toId
+      button.approve-btn.btn.btn-sm.btn-success.fa.fa-thumbs-up(title='approve')
+      button.deny-btn.btn.btn-sm.btn-danger.fa.fa-thumbs-down(title='deny')
+    if accountId == data.fromId
+      button.cancel-btn.btn.btn-sm.btn-warning.fa.fa-times(title='cancel')

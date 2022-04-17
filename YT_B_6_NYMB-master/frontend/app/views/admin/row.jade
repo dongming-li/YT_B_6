@@ -1,0 +1,31 @@
+tr(data-id=data.id)
+  if model == 'User'
+    td #{data.id}
+    td #{data.username}
+    td #{data.email}
+    td #{data.firstname}
+    td #{data.lastname}
+    if data.role == 1
+      td admin
+    else
+      td user
+  else if model == 'Vault'
+    td #{data.id}
+    td #{data.name}
+    td #{data.owner}
+  else if model == 'Transaction'
+    td #{data.id}
+    td #{data.fromId}
+    td #{data.toId}
+    td #{data.currencyId}
+    td #{data.amount}
+    td #{new Date(data.created).toDateString()}
+    if data.completed
+      td #{new Date(data.completed).toDateString()}
+    else
+      td.font-italic.text-muted pending...
+  td.text-center
+    if model == 'User'
+      button.add-funds-btn.btn.btn-sm.btn-primary.fa.fa-money(title='add funds')
+    if model == 'User' || model == 'Vault'
+      button.options-btn.btn.btn-sm.btn-warning.fa.fa-edit(title='edit')

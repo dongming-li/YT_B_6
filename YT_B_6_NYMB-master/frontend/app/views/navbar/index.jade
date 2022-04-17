@@ -1,0 +1,10 @@
+button.navbar-toggler.navbar-toggler-left(type='button' data-toggle='collapse' data-target='#sidebar' aria-controls='sidebar' aria-expanded='true' aria-label='Toggle navigation')
+  span.navbar-toggler-icon
+a#landingLink.navbar-brand.pl-4.ml-5(href='#/landing') NYMB
+ul.list-inline.mb-0(style='height: 54px; position: fixed; top:0; right: 0')
+  li#user-display.list-inline-item(style='margin-top: 8px;')
+    span.navbar-text!= name + " (" + email + ")"
+    button#sign-out-btn.btn.btn-sm.btn-default.btn-link sign out
+  li.list-inline-item
+    button#sign-in-btn.btn.btn-sm.btn-primary.tool-tip(data-toggle='tooltip' data-placement='bottom' title='Sign in to your new account!') Sign in
+    button#sign-up-btn.btn.btn-link.btn-sm Sign up

@@ -1,0 +1,19 @@
+h3 Favorites
+
+.card.mt-4
+  .card-header
+    ul.nav.nav-tabs.card-header-tabs
+      li.nav-item
+        a#user-favorites-link.nav-link.active(href='#') Users
+      li.nav-item
+        a#vault-favorites-link.nav-link(href='#') Vaults
+  #content.card-block
+    .table-responsive
+      table.table.table-striped.table-boardered.table-hover
+        thead
+          tr
+            th Favorite Name
+            th Account ID
+            th Account Owner
+            th: button.btn.btn-primary.btn-sm.create-btn Add Favorite
+        tbody#rows

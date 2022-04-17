@@ -1,0 +1,11 @@
+.modal-dialog(role='document')
+  .modal-content
+    .modal-header
+      h5.modal-title Who do you want to add to the #{data.name}
+      button.close(type='button' data-dismiss='modal' aria-label='Close')
+        span(aria-hidden='true') ×
+    form.modal-body
+      .form-group
+        label(for='userid') User ID
+        input.form-control(type='number' name='userid')
+      button.btn.btn-primary(type='submit') Submit

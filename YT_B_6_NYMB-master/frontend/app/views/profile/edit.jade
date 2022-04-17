@@ -1,0 +1,23 @@
+form.update-form
+  .form-group
+    label(for='username') Username
+    input.form-control(type='text' name='username' value=username required)
+  .form-group
+    label(for='email') Email
+    input.form-control(type='email' name='email' value=email required)
+  .form-group
+    label(for='firstname') First name
+    input.form-control(type='text' name='firstname' value=firstname required)
+  .form-group
+    label(for='lastname') Last name
+    input.form-control(type='text' name='lastname' value=lastname required)
+  .form-group
+    label(for='password') Password
+    input.form-control(type='password' name='password')
+  .form-group
+    label(for='confirm_password') Confirm Password
+    input.form-control(type='password' name='confirm_password')
+  .form-group.row.pl-3.pr-3
+    button.btn.btn-primary.btn-sm.fa.fa-check.float-right(type='submit' title='confirm')
+    button.cancel-btn.btn.btn-sm.btn-warning.fa.fa-times(type='button' title='cancel')
+    span.form-message.col-10.form-text.text-danger.text-center

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>NYMB</title>
+  <link rel="stylesheet" href="/NYMB/application.css" type="text/css" charset="utf-8">
+  <script src="/NYMB/application.js" charset="utf-8"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script charset="utf-8">
+    var exports = this;
+    jQuery(function(){
+      var App = require("index");
+      exports.app = new App({el: $("body")});
+    });
+  </script>
+</head>
+<body>
+  <div id="global-modal" class="modal fade" tabindex="-1" role="dialog"></div>
+  <nav id="navbar" class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse"></nav>
+  <nav id="sidebar" class="navbar-collapse col-xs-12 col-sm-3 bg-faded pt-4 show"></nav>
+  <div id="stack" class="col-xs-12 col-sm-9 offset-sm-3 pt-4 mt-5"></div>
+</body>
+</html>

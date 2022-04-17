@@ -1,0 +1,22 @@
+@import './tether.css'
+@import './bootstrap.css'
+@import './font-awesome.css'
+
+#stack > *:not(.active)
+  display none
+
+.navbar-collapse
+    position fixed
+    top 54px
+    &.collapsing
+        height 100%
+    &.show
+        height 100%
+
+@media (max-width: 575px)
+    .bg-faded
+        z-index: 1000
+
+#sign-in-btn
+#sign-up-btn
+    margin: 14px 14px 0 0

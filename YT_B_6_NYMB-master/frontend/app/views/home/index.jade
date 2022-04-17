@@ -1,0 +1,32 @@
+h1 Dashboard
+
+.card.card-outline-info.mb-3
+  .card-title.text-center.card-info
+    h2 Balances
+  table.table.table-striped.table-boardered.table-hover
+    thead
+      tr
+        th Currency
+        th Amount
+        th Amount In USD
+    tbody#BalanceArea
+      tr: td.text-center(colspan=7) No results ...
+
+.card.card-outline-info.mb-3
+  .card-title.text-center.card-info
+    h2 Pending Transactions
+  table.table.table-striped.table-boardered.table-hover
+    thead
+      tr
+        th Direction
+        th Currency
+        th Amount
+        th Amount in USD
+        th Time Created
+    tbody#TransactionArea
+      tr: td.text-center(colspan=7) No results ...
+
+.card.card-outline-info.mb-3
+  .card-title.text-center.card-info
+    h2 Currency Price Predictions
+  .card-body#CurrencyPriceArea

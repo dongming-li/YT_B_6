@@ -1,0 +1,28 @@
+.modal-dialog(role='document')
+  .modal-content
+    .modal-header
+      h5.modal-title Sign Up and Begin Trading!
+      button.close(type='button' data-dismiss='modal' aria-label='Close')
+        span(aria-hidden='true') ×
+    form.modal-body
+      .form-group
+        label(for='username') Username
+        input.form-control(type='text' name='username' placeholder='username' required)
+      .form-group
+        label(for='email') Email
+        input.form-control(type='email' name='email' placeholder='email' required)
+      .form-group
+        label(for='password') Password
+        input.form-control(type='password' name='password' placeholder='password' required)
+      .form-group
+        label(for='password_conf') Confirm Password
+        input.form-control(type='password' name='password_conf' placeholder='password' required)
+      .form-group
+        label(for='firstname') First name
+        input.form-control(type='text' name='firstname' placeholder='John' required)
+      .form-group
+        label(for='lastname') Last name
+        input.form-control(type='text' name='lastname' placeholder='Doe' required)
+      .form-group.row.pl-3.pr-3
+        button.col-3.btn.btn-primary(type='submit') Sign up!
+        span.col-9.form-text.text-danger.text-center

@@ -1,0 +1,19 @@
+package: git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB
+import:
+- package: github.com/sirupsen/logrus
+  version: ^1.0.3
+- package: github.com/go-sql-driver/mysql
+  version: ^1.3
+- package: github.com/gin-gonic/gin
+  version: ^1.2
+- package: github.com/appleboy/gin-jwt
+  version: ^2.3.1
+- package: github.com/preichenberger/go-coinbase-exchange
+  version: ^0.2.8
+- package: github.com/VividCortex/mysqlerr
+  vcs: git
+  version: 6c6b55f8796f578c870b7e19bafb16103bc40095
+- package: github.com/igm/sockjs-go/sockjs
+  version: ^2.0.0
+- package: github.com/dgrijalva/jwt-go
+  version: ^3.0.0

@@ -1,0 +1,11 @@
+td #{data.id}
+td #{data.accountId}
+td #{data.currencyId}
+td: input.form-control.form-control-sm(type='float' name='amount' value=data.amount placeholder=data.amount)
+td.btn-toolbar.text-center
+  .btn-group.mr-1
+    button.update-btn.btn.btn-primary.btn-sm.fa.fa-check(type='button' title='confirm')
+  .btn-group.mr-1
+    button.cancel-btn.btn.btn-sm.btn-warning.fa.fa-times(title='cancel')
+  .btn-group.mr-1
+    button.delete-btn.btn.btn.-sm.btn-danger.fa.fa-trash(title='delete')

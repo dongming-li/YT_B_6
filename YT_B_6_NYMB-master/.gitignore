@@ -1,0 +1,8 @@
+vendor/
+frontend/node_modules/
+**.DS_Store
+.vs/
+.vscode/
+frontend/public/application.css
+frontend/public/application.js
+frontend/test/public/specs.js

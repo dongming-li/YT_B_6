@@ -1,0 +1,9 @@
+.modal-dialog(role='document')
+  .modal-content
+    .modal-header
+      h4.modal-title Are you sure you want to delete this vault?
+      button.close(type='button' data-dismiss='modal' aria-label='Close')
+        span(aria-hidden='true') ×
+    form.modal-body
+      h5 #{data.name} 
+      button.confirm-delete-vault.btn.btn-primary(type='submit' ) Delete Vault

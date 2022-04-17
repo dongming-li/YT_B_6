@@ -1,0 +1,25 @@
+form#search-form.mb-3
+  .form-group
+    label(for='field') Field
+    select#field.form-control(name='field')
+      option(value='id') ID
+      option(value='name') Name
+      option(value='owner') Owner
+  .form-group
+    label(for='filter') Filter
+    input#filter.form-control(type='text' name='filter')
+  .form-group
+    button.btn.btn-primary(type='submit') Search
+    button#form-cancel.btn.btn-warning.float-right Cancel
+
+.table-responsive
+  table.table.table-striped.table-boardered.table-hover
+    thead
+      tr
+        th ID
+        th Name
+        th Owner
+        th Options
+    tbody
+      tr
+        td.text-center(colspan=4) No results ...

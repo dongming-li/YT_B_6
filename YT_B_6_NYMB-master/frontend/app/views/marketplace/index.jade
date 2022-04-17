@@ -1,0 +1,22 @@
+mixin menu(currency, title)
+  .row.mb-3
+    .col: .card(id=currency+'-USD-div')
+      .card-header: h4.align-middle!=title
+      .card-block
+        form.form-inline
+          .form-group
+            input.form-control.form-control-sm(id=currency+'-start' type='datetime-local' value='2017-08-19T13:45:00')
+            input.form-control.form-control-sm(id=currency+'-end' type='datetime-local' value='2017-09-19T13:45:00')
+            .dropdown
+              button.btn.btn-secondary.btn-sm.dropdown-toggle(id=currency+'-dropdown' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Granularity
+              .dropdown-menu(aria-labelledby='dropdownMenuButton')
+                for gran in ['Every hour', 'Every day', 'Every week', 'Every month']
+                  a.dropdown-item(class='gran'+currency href='#')!=gran
+            button.btn.btn-primary.btn-sm(id=currency+'-submit' type='submit') Submit
+
+.container-fluid
+  h1 Marketplace
+  +menu('BTC', 'Bitcoin')
+  +menu('ETH', 'Etherium')
+  +menu('LTC', 'Litecoin')

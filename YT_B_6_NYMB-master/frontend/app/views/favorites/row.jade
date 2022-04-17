@@ -1,0 +1,9 @@
+tr(data-id=data.id)
+    td #{data.favoriteName}
+    td #{data.accountId}
+    if tab == "User"
+        td #{data.username.String}
+    if tab == "Vault"
+        td #{data.vaultname.String}
+    td.btn-toolbar.text-center
+        button.options-btn.btn.btn-sm.btn-warning.fa.fa-edit(title='edit')

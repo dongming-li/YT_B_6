@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>models - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="/">Go</a></div>
+<a href="#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package models
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+
+
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+
+
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+
+			</div>
+		</div>
+
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+
+				<dd><a href="#pkg-constants">Constants</a></dd>
+
+
+
+
+				<dd><a href="#AddFunds">func AddFunds(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#CreateAccount">func CreateAccount(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#CreateBalance">func CreateBalance(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#CreateCurrency">func CreateCurrency(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#CreateFavorite">func CreateFavorite(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#CreatePermission">func CreatePermission(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#CreateTransaction">func CreateTransaction(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#CreateUser">func CreateUser(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#CreateVault">func CreateVault(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#DeleteAccount">func DeleteAccount(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#DeleteBalance">func DeleteBalance(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#DeleteCurrency">func DeleteCurrency(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#DeleteFavorite">func DeleteFavorite(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#DeletePermission">func DeletePermission(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#DeleteTransaction">func DeleteTransaction(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#DeleteUser">func DeleteUser(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#DeleteVault">func DeleteVault(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#GetQuery">func GetQuery(base string, args map[string][]string) string</a></dd>
+
+
+				<dd><a href="#ListAccount">func ListAccount(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#ListBalance">func ListBalance(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#ListCurrency">func ListCurrency(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#ListFavorites">func ListFavorites(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#ListPermission">func ListPermission(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#ListTransaction">func ListTransaction(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#ListUser">func ListUser(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#ListVault">func ListVault(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#ReadAccount">func ReadAccount(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#ReadBalance">func ReadBalance(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#ReadCurrency">func ReadCurrency(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#ReadFavorite">func ReadFavorite(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#ReadPermission">func ReadPermission(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#ReadTransaction">func ReadTransaction(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#ReadUser">func ReadUser(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#ReadVault">func ReadVault(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#RouteAccount">func RouteAccount(engine *gin.Engine, auth *jwt.GinJWTMiddleware)</a></dd>
+
+
+				<dd><a href="#RouteBalance">func RouteBalance(engine *gin.Engine, auth *jwt.GinJWTMiddleware)</a></dd>
+
+
+				<dd><a href="#RouteCurrency">func RouteCurrency(engine *gin.Engine, auth *jwt.GinJWTMiddleware)</a></dd>
+
+
+				<dd><a href="#RouteFavorite">func RouteFavorite(engine *gin.Engine, auth *jwt.GinJWTMiddleware)</a></dd>
+
+
+				<dd><a href="#RoutePermission">func RoutePermission(engine *gin.Engine, auth *jwt.GinJWTMiddleware)</a></dd>
+
+
+				<dd><a href="#RouteTransaction">func RouteTransaction(engine *gin.Engine, auth *jwt.GinJWTMiddleware)</a></dd>
+
+
+				<dd><a href="#RouteUser">func RouteUser(engine *gin.Engine, auth *jwt.GinJWTMiddleware)</a></dd>
+
+
+				<dd><a href="#RouteVault">func RouteVault(engine *gin.Engine, auth *jwt.GinJWTMiddleware)</a></dd>
+
+
+				<dd><a href="#ScanAccount">func ScanAccount(a *Account, rows *sql.Rows) error</a></dd>
+
+
+				<dd><a href="#ScanBalance">func ScanBalance(c *Balance, rows *sql.Rows) error</a></dd>
+
+
+				<dd><a href="#ScanCurrency">func ScanCurrency(c *Currency, rows *sql.Rows) error</a></dd>
+
+
+				<dd><a href="#ScanFavorite">func ScanFavorite(f *Favorite, rows *sql.Rows) error</a></dd>
+
+
+				<dd><a href="#ScanPermission">func ScanPermission(p *Permission, rows *sql.Rows) error</a></dd>
+
+
+				<dd><a href="#ScanTransaction">func ScanTransaction(t *Transaction, rows *sql.Rows) error</a></dd>
+
+
+				<dd><a href="#ScanUser">func ScanUser(u *User, rows *sql.Rows) error</a></dd>
+
+
+				<dd><a href="#ScanUserWithAccount">func ScanUserWithAccount(u *User, rows *sql.Rows) error</a></dd>
+
+
+				<dd><a href="#ScanUserWithEmailAndRole">func ScanUserWithEmailAndRole(u *User, rows *sql.Rows) error</a></dd>
+
+
+				<dd><a href="#ScanUserWithRoleAndAccount">func ScanUserWithRoleAndAccount(u *User, rows *sql.Rows) error</a></dd>
+
+
+				<dd><a href="#ScanVault">func ScanVault(v *Vault, rows *sql.Rows) error</a></dd>
+
+
+				<dd><a href="#ScanVaultWithOwner">func ScanVaultWithOwner(v *Vault, rows *sql.Rows) error</a></dd>
+
+
+				<dd><a href="#UpdateAccount">func UpdateAccount(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#UpdateBalance">func UpdateBalance(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#UpdateCurrency">func UpdateCurrency(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#UpdateFavorite">func UpdateFavorite(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#UpdatePermission">func UpdatePermission(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#UpdateTransaction">func UpdateTransaction(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#UpdateUser">func UpdateUser(c *gin.Context)</a></dd>
+
+
+				<dd><a href="#UpdateVault">func UpdateVault(c *gin.Context)</a></dd>
+
+
+
+				<dd><a href="#Account">type Account</a></dd>
+
+
+
+					<dd>&nbsp; &nbsp; <a href="#Account.String">func (a Account) String() string</a></dd>
+
+
+
+				<dd><a href="#Balance">type Balance</a></dd>
+
+
+
+
+				<dd><a href="#Currency">type Currency</a></dd>
+
+
+
+
+				<dd><a href="#Favorite">type Favorite</a></dd>
+
+
+
+
+				<dd><a href="#Permission">type Permission</a></dd>
+
+
+
+
+				<dd><a href="#Transaction">type Transaction</a></dd>
+
+
+
+
+				<dd><a href="#TransactionStatus">type TransactionStatus</a></dd>
+
+
+
+
+				<dd><a href="#User">type User</a></dd>
+
+
+
+					<dd>&nbsp; &nbsp; <a href="#User.String">func (u User) String() string</a></dd>
+
+
+
+				<dd><a href="#Vault">type Vault</a></dd>
+
+
+
+
+			</dl>
+			</div><!-- #manual-nav -->
+
+
+
+
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+
+				<a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/account.go">account.go</a>
+
+				<a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/balance.go">balance.go</a>
+
+				<a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/currency.go">currency.go</a>
+
+				<a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/favorite.go">favorite.go</a>
+
+				<a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/model.go">model.go</a>
+
+				<a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/permissions.go">permissions.go</a>
+
+				<a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/transaction.go">transaction.go</a>
+
+				<a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/user.go">user.go</a>
+
+				<a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/vault.go">vault.go</a>
+
+			</span>
+			</p>
+
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+
+			<h2 id="pkg-constants">Constants</h2>
+
+
+				<pre>const (
+    <span class="comment">// ListUsers is exported for use with auth.go</span>
+    <span id="ListUsers">ListUsers</span> = &#34;SELECT u.ID, u.Username, u.Email, u.FirstName, u.LastName, r.RoleID, a.ID FROM Users AS u &#34; +
+        &#34;JOIN UserRoles AS r ON u.ID=r.UserID &#34; +
+        &#34;LEFT JOIN Accounts AS a ON u.ID=a.UserID&#34;
+)</pre>
+
+
+
+
+
+
+			<h2 id="AddFunds">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/balance.go?s=11373:11402#L404">AddFunds</a>
+				<a class="permalink" href="#AddFunds">&#xb6;</a>
+			</h2>
+			<pre>func AddFunds(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+AddFunds is the handler for admins to add funds to another user&#39;s account
+</p>
+
+
+
+
+
+
+
+			<h2 id="CreateAccount">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/account.go?s=1919:1953#L64">CreateAccount</a>
+				<a class="permalink" href="#CreateAccount">&#xb6;</a>
+			</h2>
+			<pre>func CreateAccount(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+CreateAccount is the handler for creating Accounts
+</p>
+
+
+
+
+
+
+
+			<h2 id="CreateBalance">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/balance.go?s=2873:2907#L91">CreateBalance</a>
+				<a class="permalink" href="#CreateBalance">&#xb6;</a>
+			</h2>
+			<pre>func CreateBalance(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+CreateBalance is the handler for creating Balances
+</p>
+
+
+
+
+
+
+
+			<h2 id="CreateCurrency">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/currency.go?s=2207:2242#L68">CreateCurrency</a>
+				<a class="permalink" href="#CreateCurrency">&#xb6;</a>
+			</h2>
+			<pre>func CreateCurrency(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+CreateCurrency is the handler for creating Currencies
+</p>
+<p>
+This will probably never be used because the only three
+rows in the database should be for Bitcoin, Litecoin, and Ethurium
+which should exist on application start up.
+</p>
+
+
+
+
+
+
+
+			<h2 id="CreateFavorite">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/favorite.go?s=1816:1851#L41">CreateFavorite</a>
+				<a class="permalink" href="#CreateFavorite">&#xb6;</a>
+			</h2>
+			<pre>func CreateFavorite(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+CreateFavorite is the handler for creating favorites
+</p>
+
+
+
+
+
+
+
+			<h2 id="CreatePermission">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/permissions.go?s=2756:2793#L72">CreatePermission</a>
+				<a class="permalink" href="#CreatePermission">&#xb6;</a>
+			</h2>
+			<pre>func CreatePermission(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+CreatePermission is the handler for creating permissions
+</p>
+
+
+
+
+
+
+
+			<h2 id="CreateTransaction">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/transaction.go?s=3023:3061#L82">CreateTransaction</a>
+				<a class="permalink" href="#CreateTransaction">&#xb6;</a>
+			</h2>
+			<pre>func CreateTransaction(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+CreateTransaction is the handler for creating Transactions
+</p>
+
+
+
+
+
+
+
+			<h2 id="CreateUser">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/user.go?s=3114:3145#L91">CreateUser</a>
+				<a class="permalink" href="#CreateUser">&#xb6;</a>
+			</h2>
+			<pre>func CreateUser(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+CreateUser is the handler for creating users
+</p>
+
+
+
+
+
+
+
+			<h2 id="CreateVault">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/vault.go?s=2600:2632#L85">CreateVault</a>
+				<a class="permalink" href="#CreateVault">&#xb6;</a>
+			</h2>
+			<pre>func CreateVault(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+CreateVault is the handler for creating vaults
+</p>
+
+
+
+
+
+
+
+			<h2 id="DeleteAccount">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/account.go?s=5317:5351#L207">DeleteAccount</a>
+				<a class="permalink" href="#DeleteAccount">&#xb6;</a>
+			</h2>
+			<pre>func DeleteAccount(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+DeleteAccount is the handler for Deleting Accounts
+</p>
+<p>
+This would need to be called before a User or Vault is deleted
+</p>
+
+
+
+
+
+
+
+			<h2 id="DeleteBalance">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/balance.go?s=8934:8968#L314">DeleteBalance</a>
+				<a class="permalink" href="#DeleteBalance">&#xb6;</a>
+			</h2>
+			<pre>func DeleteBalance(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+DeleteBalance is the handler for Deleting Balances
+</p>
+
+
+
+
+
+
+
+			<h2 id="DeleteCurrency">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/currency.go?s=4277:4312#L161">DeleteCurrency</a>
+				<a class="permalink" href="#DeleteCurrency">&#xb6;</a>
+			</h2>
+			<pre>func DeleteCurrency(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+DeleteCurrency is the handler for Deleting Currencies
+</p>
+
+
+
+
+
+
+
+			<h2 id="DeleteFavorite">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/favorite.go?s=4561:4596#L165">DeleteFavorite</a>
+				<a class="permalink" href="#DeleteFavorite">&#xb6;</a>
+			</h2>
+			<pre>func DeleteFavorite(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+DeleteFavorite is the handler for deleting a favorite
+</p>
+
+
+
+
+
+
+
+			<h2 id="DeletePermission">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/permissions.go?s=5847:5884#L178">DeletePermission</a>
+				<a class="permalink" href="#DeletePermission">&#xb6;</a>
+			</h2>
+			<pre>func DeletePermission(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+DeletePermission is the handler for deleting a permission
+</p>
+
+
+
+
+
+
+
+			<h2 id="DeleteTransaction">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/transaction.go?s=3384:3422#L97">DeleteTransaction</a>
+				<a class="permalink" href="#DeleteTransaction">&#xb6;</a>
+			</h2>
+			<pre>func DeleteTransaction(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+DeleteTransaction is the handler for Deleting Transactions
+</p>
+
+
+
+
+
+
+
+			<h2 id="DeleteUser">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/user.go?s=6999:7030#L253">DeleteUser</a>
+				<a class="permalink" href="#DeleteUser">&#xb6;</a>
+			</h2>
+			<pre>func DeleteUser(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+DeleteUser is the handler for deleting a user
+</p>
+
+
+
+
+
+
+
+			<h2 id="DeleteVault">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/vault.go?s=5080:5112#L186">DeleteVault</a>
+				<a class="permalink" href="#DeleteVault">&#xb6;</a>
+			</h2>
+			<pre>func DeleteVault(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+DeleteVault is the handler for deleting a vault
+</p>
+
+
+
+
+
+
+
+			<h2 id="GetQuery">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/model.go?s=315:374#L6">GetQuery</a>
+				<a class="permalink" href="#GetQuery">&#xb6;</a>
+			</h2>
+			<pre>func GetQuery(base <a href="/pkg/builtin/#string">string</a>, args map[<a href="/pkg/builtin/#string">string</a>][]<a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+			<p>
+GetQuery takes a base query and inserts the given args
+</p>
+
+
+
+
+
+
+
+			<h2 id="ListAccount">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/account.go?s=1266:1298#L34">ListAccount</a>
+				<a class="permalink" href="#ListAccount">&#xb6;</a>
+			</h2>
+			<pre>func ListAccount(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+ListAccount is the handler for listing Accounts
+</p>
+
+
+
+
+
+
+
+			<h2 id="ListBalance">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/balance.go?s=1636:1668#L40">ListBalance</a>
+				<a class="permalink" href="#ListBalance">&#xb6;</a>
+			</h2>
+			<pre>func ListBalance(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+ListBalance is the handler for listing Balances
+</p>
+
+
+
+
+
+
+
+			<h2 id="ListCurrency">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/currency.go?s=1332:1365#L33">ListCurrency</a>
+				<a class="permalink" href="#ListCurrency">&#xb6;</a>
+			</h2>
+			<pre>func ListCurrency(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+ListCurrency is the handler for listing Currencies
+</p>
+
+
+
+
+
+
+
+			<h2 id="ListFavorites">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/favorite.go?s=3853:3887#L132">ListFavorites</a>
+				<a class="permalink" href="#ListFavorites">&#xb6;</a>
+			</h2>
+			<pre>func ListFavorites(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+ListFavorites is the handler for reading favorites for a given user
+</p>
+
+
+
+
+
+
+
+			<h2 id="ListPermission">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/permissions.go?s=2032:2067#L41">ListPermission</a>
+				<a class="permalink" href="#ListPermission">&#xb6;</a>
+			</h2>
+			<pre>func ListPermission(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+ListPermission is the handler for listing permissions
+</p>
+
+
+
+
+
+
+
+			<h2 id="ListTransaction">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/transaction.go?s=2282:2318#L51">ListTransaction</a>
+				<a class="permalink" href="#ListTransaction">&#xb6;</a>
+			</h2>
+			<pre>func ListTransaction(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+ListTransaction is the handler for listing Transactions
+</p>
+
+
+
+
+
+
+
+			<h2 id="ListUser">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/user.go?s=2294:2323#L54">ListUser</a>
+				<a class="permalink" href="#ListUser">&#xb6;</a>
+			</h2>
+			<pre>func ListUser(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+ListUser is the handler for listing users
+</p>
+
+
+
+
+
+
+
+			<h2 id="ListVault">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/vault.go?s=1765:1795#L48">ListVault</a>
+				<a class="permalink" href="#ListVault">&#xb6;</a>
+			</h2>
+			<pre>func ListVault(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+ListVault is the handler for listing vaults
+</p>
+
+
+
+
+
+
+
+			<h2 id="ReadAccount">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/account.go?s=2653:2685#L95">ReadAccount</a>
+				<a class="permalink" href="#ReadAccount">&#xb6;</a>
+			</h2>
+			<pre>func ReadAccount(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+ReadAccount is the handler for reading Accounts
+</p>
+
+
+
+
+
+
+
+			<h2 id="ReadBalance">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/balance.go?s=5071:5103#L171">ReadBalance</a>
+				<a class="permalink" href="#ReadBalance">&#xb6;</a>
+			</h2>
+			<pre>func ReadBalance(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+ReadBalance is the handler for reading Balances
+</p>
+
+
+
+
+
+
+
+			<h2 id="ReadCurrency">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/currency.go?s=2791:2824#L94">ReadCurrency</a>
+				<a class="permalink" href="#ReadCurrency">&#xb6;</a>
+			</h2>
+			<pre>func ReadCurrency(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+ReadCurrency is the handler for reading Currencies
+</p>
+
+
+
+
+
+
+
+			<h2 id="ReadFavorite">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/favorite.go?s=3253:3286#L105">ReadFavorite</a>
+				<a class="permalink" href="#ReadFavorite">&#xb6;</a>
+			</h2>
+			<pre>func ReadFavorite(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+ReadFavorite is the handler for reading a specific favorite
+</p>
+
+
+
+
+
+
+
+			<h2 id="ReadPermission">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/permissions.go?s=3680:3715#L100">ReadPermission</a>
+				<a class="permalink" href="#ReadPermission">&#xb6;</a>
+			</h2>
+			<pre>func ReadPermission(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+ReadPermission is the handler for reading a permission
+</p>
+<p>
+In the URL, &#34;id&#34; represents the permission&#39;s user id.
+</p>
+
+
+
+
+
+
+
+			<h2 id="ReadTransaction">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/transaction.go?s=3142:3178#L87">ReadTransaction</a>
+				<a class="permalink" href="#ReadTransaction">&#xb6;</a>
+			</h2>
+			<pre>func ReadTransaction(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+ReadTransaction is the handler for reading Transactions
+</p>
+
+
+
+
+
+
+
+			<h2 id="ReadUser">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/user.go?s=4190:4219#L138">ReadUser</a>
+				<a class="permalink" href="#ReadUser">&#xb6;</a>
+			</h2>
+			<pre>func ReadUser(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+ReadUser is the handler for reading a user
+</p>
+
+
+
+
+
+
+
+			<h2 id="ReadVault">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/vault.go?s=3694:3724#L119">ReadVault</a>
+				<a class="permalink" href="#ReadVault">&#xb6;</a>
+			</h2>
+			<pre>func ReadVault(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+ReadVault is the handler for reading a vault
+</p>
+
+
+
+
+
+
+
+			<h2 id="RouteAccount">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/account.go?s=900:965#L24">RouteAccount</a>
+				<a class="permalink" href="#RouteAccount">&#xb6;</a>
+			</h2>
+			<pre>func RouteAccount(engine *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Engine">Engine</a>, auth *<a href="/pkg/github.com/appleboy/gin-jwt/">jwt</a>.<a href="/pkg/github.com/appleboy/gin-jwt/#GinJWTMiddleware">GinJWTMiddleware</a>)</pre>
+			<p>
+RouteAccount sets up the Account model&#39;s HTTP routes
+</p>
+
+
+
+
+
+
+
+			<h2 id="RouteBalance">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/balance.go?s=1169:1234#L28">RouteBalance</a>
+				<a class="permalink" href="#RouteBalance">&#xb6;</a>
+			</h2>
+			<pre>func RouteBalance(engine *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Engine">Engine</a>, auth *<a href="/pkg/github.com/appleboy/gin-jwt/">jwt</a>.<a href="/pkg/github.com/appleboy/gin-jwt/#GinJWTMiddleware">GinJWTMiddleware</a>)</pre>
+			<p>
+RouteBalance sets up the Balance model&#39;s HTTP routes
+</p>
+
+
+
+
+
+
+
+			<h2 id="RouteCurrency">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/currency.go?s=956:1022#L23">RouteCurrency</a>
+				<a class="permalink" href="#RouteCurrency">&#xb6;</a>
+			</h2>
+			<pre>func RouteCurrency(engine *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Engine">Engine</a>, auth *<a href="/pkg/github.com/appleboy/gin-jwt/">jwt</a>.<a href="/pkg/github.com/appleboy/gin-jwt/#GinJWTMiddleware">GinJWTMiddleware</a>)</pre>
+			<p>
+RouteCurrency sets up the Currency model&#39;s HTTP routes
+</p>
+
+
+
+
+
+
+
+			<h2 id="RouteFavorite">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/favorite.go?s=1475:1541#L32">RouteFavorite</a>
+				<a class="permalink" href="#RouteFavorite">&#xb6;</a>
+			</h2>
+			<pre>func RouteFavorite(engine *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Engine">Engine</a>, auth *<a href="/pkg/github.com/appleboy/gin-jwt/">jwt</a>.<a href="/pkg/github.com/appleboy/gin-jwt/#GinJWTMiddleware">GinJWTMiddleware</a>)</pre>
+			<p>
+RouteFavorite sets up the favorite model&#39;s HTTP routes
+</p>
+
+
+
+
+
+
+
+			<h2 id="RoutePermission">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/permissions.go?s=1636:1704#L30">RoutePermission</a>
+				<a class="permalink" href="#RoutePermission">&#xb6;</a>
+			</h2>
+			<pre>func RoutePermission(engine *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Engine">Engine</a>, auth *<a href="/pkg/github.com/appleboy/gin-jwt/">jwt</a>.<a href="/pkg/github.com/appleboy/gin-jwt/#GinJWTMiddleware">GinJWTMiddleware</a>)</pre>
+			<p>
+RoutePermission sets up the permission model&#39;s HTTP routes
+</p>
+
+
+
+
+
+
+
+			<h2 id="RouteTransaction">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/transaction.go?s=1880:1949#L41">RouteTransaction</a>
+				<a class="permalink" href="#RouteTransaction">&#xb6;</a>
+			</h2>
+			<pre>func RouteTransaction(engine *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Engine">Engine</a>, auth *<a href="/pkg/github.com/appleboy/gin-jwt/">jwt</a>.<a href="/pkg/github.com/appleboy/gin-jwt/#GinJWTMiddleware">GinJWTMiddleware</a>)</pre>
+			<p>
+RouteTransaction sets up the Transaction model&#39;s HTTP routes
+</p>
+
+
+
+
+
+
+
+			<h2 id="RouteUser">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/user.go?s=1953:2015#L44">RouteUser</a>
+				<a class="permalink" href="#RouteUser">&#xb6;</a>
+			</h2>
+			<pre>func RouteUser(engine *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Engine">Engine</a>, auth *<a href="/pkg/github.com/appleboy/gin-jwt/">jwt</a>.<a href="/pkg/github.com/appleboy/gin-jwt/#GinJWTMiddleware">GinJWTMiddleware</a>)</pre>
+			<p>
+RouteUser sets up the user model&#39;s HTTP routes
+</p>
+
+
+
+
+
+
+
+			<h2 id="RouteVault">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/vault.go?s=1292:1355#L36">RouteVault</a>
+				<a class="permalink" href="#RouteVault">&#xb6;</a>
+			</h2>
+			<pre>func RouteVault(engine *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Engine">Engine</a>, auth *<a href="/pkg/github.com/appleboy/gin-jwt/">jwt</a>.<a href="/pkg/github.com/appleboy/gin-jwt/#GinJWTMiddleware">GinJWTMiddleware</a>)</pre>
+			<p>
+RouteVault sets up the Vault model&#39;s HTTP routes
+</p>
+
+
+
+
+
+
+
+			<h2 id="ScanAccount">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/account.go?s=6815:6865#L275">ScanAccount</a>
+				<a class="permalink" href="#ScanAccount">&#xb6;</a>
+			</h2>
+			<pre>func ScanAccount(a *<a href="#Account">Account</a>, rows *<a href="/pkg/database/sql/">sql</a>.<a href="/pkg/database/sql/#Rows">Rows</a>) <a href="/pkg/builtin/#error">error</a></pre>
+			<p>
+ScanAccount scans the given sql row into the given account
+</p>
+
+
+
+
+
+
+
+			<h2 id="ScanBalance">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/balance.go?s=10722:10772#L381">ScanBalance</a>
+				<a class="permalink" href="#ScanBalance">&#xb6;</a>
+			</h2>
+			<pre>func ScanBalance(c *<a href="#Balance">Balance</a>, rows *<a href="/pkg/database/sql/">sql</a>.<a href="/pkg/database/sql/#Rows">Rows</a>) <a href="/pkg/builtin/#error">error</a></pre>
+			<p>
+ScanBalance scans the given sql row into the given currency
+</p>
+
+
+
+
+
+
+
+			<h2 id="ScanCurrency">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/currency.go?s=5017:5069#L194">ScanCurrency</a>
+				<a class="permalink" href="#ScanCurrency">&#xb6;</a>
+			</h2>
+			<pre>func ScanCurrency(c *<a href="#Currency">Currency</a>, rows *<a href="/pkg/database/sql/">sql</a>.<a href="/pkg/database/sql/#Rows">Rows</a>) <a href="/pkg/builtin/#error">error</a></pre>
+			<p>
+ScanCurrency scans the given sql row into the given currency
+</p>
+
+
+
+
+
+
+
+			<h2 id="ScanFavorite">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/favorite.go?s=4974:5026#L185">ScanFavorite</a>
+				<a class="permalink" href="#ScanFavorite">&#xb6;</a>
+			</h2>
+			<pre>func ScanFavorite(f *<a href="#Favorite">Favorite</a>, rows *<a href="/pkg/database/sql/">sql</a>.<a href="/pkg/database/sql/#Rows">Rows</a>) <a href="/pkg/builtin/#error">error</a></pre>
+			<p>
+ScanFavorite scans the given sql row into the given Favorite
+</p>
+
+
+
+
+
+
+
+			<h2 id="ScanPermission">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/permissions.go?s=6615:6671#L211">ScanPermission</a>
+				<a class="permalink" href="#ScanPermission">&#xb6;</a>
+			</h2>
+			<pre>func ScanPermission(p *<a href="#Permission">Permission</a>, rows *<a href="/pkg/database/sql/">sql</a>.<a href="/pkg/database/sql/#Rows">Rows</a>) <a href="/pkg/builtin/#error">error</a></pre>
+			<p>
+ScanPermission scans the given sql row into the given permission
+</p>
+
+
+
+
+
+
+
+			<h2 id="ScanTransaction">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/transaction.go?s=3514:3572#L102">ScanTransaction</a>
+				<a class="permalink" href="#ScanTransaction">&#xb6;</a>
+			</h2>
+			<pre>func ScanTransaction(t *<a href="#Transaction">Transaction</a>, rows *<a href="/pkg/database/sql/">sql</a>.<a href="/pkg/database/sql/#Rows">Rows</a>) <a href="/pkg/builtin/#error">error</a></pre>
+			<p>
+ScanTransaction scans the given sql row into the given transaction
+</p>
+
+
+
+
+
+
+
+			<h2 id="ScanUser">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/user.go?s=8656:8700#L322">ScanUser</a>
+				<a class="permalink" href="#ScanUser">&#xb6;</a>
+			</h2>
+			<pre>func ScanUser(u *<a href="#User">User</a>, rows *<a href="/pkg/database/sql/">sql</a>.<a href="/pkg/database/sql/#Rows">Rows</a>) <a href="/pkg/builtin/#error">error</a></pre>
+			<p>
+ScanUser scans the given sql row into the given user
+</p>
+
+
+
+
+
+
+
+			<h2 id="ScanUserWithAccount">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/user.go?s=8906:8961#L327">ScanUserWithAccount</a>
+				<a class="permalink" href="#ScanUserWithAccount">&#xb6;</a>
+			</h2>
+			<pre>func ScanUserWithAccount(u *<a href="#User">User</a>, rows *<a href="/pkg/database/sql/">sql</a>.<a href="/pkg/database/sql/#Rows">Rows</a>) <a href="/pkg/builtin/#error">error</a></pre>
+			<p>
+ScanUserWithAccount scans the given sql row into the given user with an account ID corresponding to the user
+</p>
+
+
+
+
+
+
+
+			<h2 id="ScanUserWithEmailAndRole">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/user.go?s=9675:9735#L351">ScanUserWithEmailAndRole</a>
+				<a class="permalink" href="#ScanUserWithEmailAndRole">&#xb6;</a>
+			</h2>
+			<pre>func ScanUserWithEmailAndRole(u *<a href="#User">User</a>, rows *<a href="/pkg/database/sql/">sql</a>.<a href="/pkg/database/sql/#Rows">Rows</a>) <a href="/pkg/builtin/#error">error</a></pre>
+			<p>
+ScanUserWithEmailAndRole scans the given sql row into the user
+assuming the returned row only has id, email, and role specified
+</p>
+
+
+
+
+
+
+
+			<h2 id="ScanUserWithRoleAndAccount">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/user.go?s=9278:9340#L339">ScanUserWithRoleAndAccount</a>
+				<a class="permalink" href="#ScanUserWithRoleAndAccount">&#xb6;</a>
+			</h2>
+			<pre>func ScanUserWithRoleAndAccount(u *<a href="#User">User</a>, rows *<a href="/pkg/database/sql/">sql</a>.<a href="/pkg/database/sql/#Rows">Rows</a>) <a href="/pkg/builtin/#error">error</a></pre>
+			<p>
+ScanUserWithRoleAndAccount scans the given sql row into the user
+assuming the returned row also has role id
+</p>
+
+
+
+
+
+
+
+			<h2 id="ScanVault">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/vault.go?s=6962:7008#L262">ScanVault</a>
+				<a class="permalink" href="#ScanVault">&#xb6;</a>
+			</h2>
+			<pre>func ScanVault(v *<a href="#Vault">Vault</a>, rows *<a href="/pkg/database/sql/">sql</a>.<a href="/pkg/database/sql/#Rows">Rows</a>) <a href="/pkg/builtin/#error">error</a></pre>
+			<p>
+ScanVault scans the given sql row into the given vault
+</p>
+
+
+
+
+
+
+
+			<h2 id="ScanVaultWithOwner">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/vault.go?s=7198:7253#L268">ScanVaultWithOwner</a>
+				<a class="permalink" href="#ScanVaultWithOwner">&#xb6;</a>
+			</h2>
+			<pre>func ScanVaultWithOwner(v *<a href="#Vault">Vault</a>, rows *<a href="/pkg/database/sql/">sql</a>.<a href="/pkg/database/sql/#Rows">Rows</a>) <a href="/pkg/builtin/#error">error</a></pre>
+			<p>
+ScanVaultWithOwner scans the given sql row into the given vault
+assuming the sql row has both owner and owner id values and account
+</p>
+
+
+
+
+
+
+
+			<h2 id="UpdateAccount">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/account.go?s=3418:3452#L124">UpdateAccount</a>
+				<a class="permalink" href="#UpdateAccount">&#xb6;</a>
+			</h2>
+			<pre>func UpdateAccount(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+UpdateAccount is the handler for updating Accounts
+</p>
+<p>
+This will probably never be used. Every account is
+associated with either a User or Vault. Updating
+an Account implies transfering an Account from
+one User or Vault to another. The other User or
+Vault probably already has an Account and no
+User or Vault should have more than one Account.
+</p>
+
+
+
+
+
+
+
+			<h2 id="UpdateBalance">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/balance.go?s=6587:6621#L229">UpdateBalance</a>
+				<a class="permalink" href="#UpdateBalance">&#xb6;</a>
+			</h2>
+			<pre>func UpdateBalance(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+UpdateBalance is the handler for updating Balances
+</p>
+
+
+
+
+
+
+
+			<h2 id="UpdateCurrency">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/currency.go?s=3404:3439#L121">UpdateCurrency</a>
+				<a class="permalink" href="#UpdateCurrency">&#xb6;</a>
+			</h2>
+			<pre>func UpdateCurrency(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+UpdateCurrency is the handler for updating Currencies
+</p>
+
+
+
+
+
+
+
+			<h2 id="UpdateFavorite">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/favorite.go?s=2504:2539#L68">UpdateFavorite</a>
+				<a class="permalink" href="#UpdateFavorite">&#xb6;</a>
+			</h2>
+			<pre>func UpdateFavorite(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+UpdateFavorite is the handler for updating a given favorite by ID
+</p>
+
+
+
+
+
+
+
+			<h2 id="UpdatePermission">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/permissions.go?s=4379:4416#L129">UpdatePermission</a>
+				<a class="permalink" href="#UpdatePermission">&#xb6;</a>
+			</h2>
+			<pre>func UpdatePermission(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+UpdatePermission is the handler for updating a permission
+</p>
+<p>
+In the URL, &#34;id&#34; represents the permission&#39;s user id.
+</p>
+
+
+
+
+
+
+
+			<h2 id="UpdateTransaction">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/transaction.go?s=3262:3300#L92">UpdateTransaction</a>
+				<a class="permalink" href="#UpdateTransaction">&#xb6;</a>
+			</h2>
+			<pre>func UpdateTransaction(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+UpdateTransaction is the handler for updating Transactions
+</p>
+
+
+
+
+
+
+
+			<h2 id="UpdateUser">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/user.go?s=4800:4831#L166">UpdateUser</a>
+				<a class="permalink" href="#UpdateUser">&#xb6;</a>
+			</h2>
+			<pre>func UpdateUser(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+UpdateUser is the handler for updating a user
+</p>
+
+
+
+
+
+
+
+			<h2 id="UpdateVault">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/vault.go?s=4253:4285#L146">UpdateVault</a>
+				<a class="permalink" href="#UpdateVault">&#xb6;</a>
+			</h2>
+			<pre>func UpdateVault(c *<a href="/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>
+UpdateVault is the handler for updating a vault
+</p>
+
+
+
+
+
+
+
+
+			<h2 id="Account">type <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/account.go?s=696:842#L17">Account</a>
+				<a class="permalink" href="#Account">&#xb6;</a>
+			</h2>
+			<p>
+Account defines information of a Account
+</p>
+
+			<pre>type Account struct {
+<span id="Account.ID"></span>    ID      <a href="/pkg/builtin/#int">int</a> `form:&#34;id&#34; json:&#34;id&#34;`
+<span id="Account.UserID"></span>    UserID  <a href="/pkg/builtin/#int">int</a> `form:&#34;userId&#34; json:&#34;userId&#34;`
+<span id="Account.VaultID"></span>    VaultID <a href="/pkg/builtin/#int">int</a> `form:&#34;vaultId&#34; json:&#34;vaultId&#34;`
+}</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<h3 id="Account.String">func (Account) <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/account.go?s=7122:7154#L290">String</a>
+					<a class="permalink" href="#Account.String">&#xb6;</a>
+				</h3>
+				<pre>func (a <a href="#Account">Account</a>) String() <a href="/pkg/builtin/#string">string</a></pre>
+
+
+
+
+
+
+
+
+			<h2 id="Balance">type <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/balance.go?s=757:986#L18">Balance</a>
+				<a class="permalink" href="#Balance">&#xb6;</a>
+			</h2>
+			<p>
+Balance defines information of a Balance
+</p>
+
+			<pre>type Balance struct {
+<span id="Balance.ID"></span>    ID         <a href="/pkg/builtin/#int">int</a>     `form:&#34;id&#34; json:&#34;id&#34;`
+<span id="Balance.AccountID"></span>    AccountID  <a href="/pkg/builtin/#int">int</a>     `form:&#34;accountId&#34; json:&#34;accountId&#34;`
+<span id="Balance.CurrencyID"></span>    CurrencyID <a href="/pkg/builtin/#int">int</a>     `form:&#34;currencyId&#34; json:&#34;currencyId&#34;`
+<span id="Balance.Amount"></span>    Amount     <a href="/pkg/builtin/#float64">float64</a> `form:&#34;amount&#34; json:&#34;amount&#34;`
+}</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<h2 id="Currency">type <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/currency.go?s=680:896#L15">Currency</a>
+				<a class="permalink" href="#Currency">&#xb6;</a>
+			</h2>
+			<p>
+Currency defines information of a Currency
+</p>
+
+			<pre>type Currency struct {
+<span id="Currency.ID"></span>    ID        <a href="/pkg/builtin/#int">int</a>    `form:&#34;id&#34; json:&#34;id&#34;`
+<span id="Currency.Name"></span>    Name      <a href="/pkg/builtin/#string">string</a> `form:&#34;name&#34; json:&#34;name&#34;`
+<span id="Currency.ShortName"></span>    ShortName <a href="/pkg/builtin/#string">string</a> `form:&#34;shortname&#34; json:&#34;shortname&#34;`
+<span id="Currency.UnitPrice"></span>    UnitPrice <a href="/pkg/builtin/#int">int</a>    `form:&#34;unitPrice&#34; json:&#34;unitPrice&#34;`
+}</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<h2 id="Favorite">type <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/favorite.go?s=1050:1415#L22">Favorite</a>
+				<a class="permalink" href="#Favorite">&#xb6;</a>
+			</h2>
+			<p>
+Favorite defines information of a Favorite
+</p>
+
+			<pre>type Favorite struct {
+<span id="Favorite.ID"></span>    ID           <a href="/pkg/builtin/#int">int</a>            `form:&#34;id&#34; json:&#34;id&#34;`
+<span id="Favorite.UserID"></span>    UserID       <a href="/pkg/builtin/#int">int</a>            `form:&#34;userId&#34; json:&#34;userId&#34;`
+<span id="Favorite.AccountID"></span>    AccountID    <a href="/pkg/builtin/#int">int</a>            `form:&#34;accountId&#34; json:&#34;accountId&#34;`
+<span id="Favorite.FavoriteName"></span>    FavoriteName <a href="/pkg/builtin/#string">string</a>         `form:&#34;favoriteName&#34; json:&#34;favoriteName&#34;`
+<span id="Favorite.Username"></span>    Username     <a href="/pkg/database/sql/">sql</a>.<a href="/pkg/database/sql/#NullString">NullString</a> `json:&#34;username&#34;`
+<span id="Favorite.Vaultname"></span>    Vaultname    <a href="/pkg/database/sql/">sql</a>.<a href="/pkg/database/sql/#NullString">NullString</a> `json:&#34;vaultname&#34;`
+}</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<h2 id="Permission">type <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/permissions.go?s=924:1572#L16">Permission</a>
+				<a class="permalink" href="#Permission">&#xb6;</a>
+			</h2>
+			<p>
+Permission defines information of a permission
+</p>
+
+			<pre>type Permission struct {
+<span id="Permission.ID"></span>    ID                 <a href="/pkg/builtin/#int">int</a>    `form:&#34;ID&#34; json:&#34;ID&#34;`
+<span id="Permission.UserID"></span>    UserID             <a href="/pkg/builtin/#int">int</a>    `form:&#34;userID&#34; json:&#34;userID&#34;`
+<span id="Permission.VaultID"></span>    VaultID            <a href="/pkg/builtin/#int">int</a>    `form:&#34;vaultID&#34; json:&#34;vaultID&#34;`
+<span id="Permission.RequestTransaction"></span>    RequestTransaction <a href="/pkg/builtin/#bool">bool</a>   `form:&#34;requestTransaction&#34; json:&#34;requestTransaction&#34;`
+<span id="Permission.ApproveTransaction"></span>    ApproveTransaction <a href="/pkg/builtin/#bool">bool</a>   `form:&#34;approveTransaction&#34; json:&#34;approveTransaction&#34;`
+<span id="Permission.AddUser"></span>    AddUser            <a href="/pkg/builtin/#bool">bool</a>   `form:&#34;addUser&#34; json:&#34;addUser&#34;`
+<span id="Permission.RemoveUser"></span>    RemoveUser         <a href="/pkg/builtin/#bool">bool</a>   `form:&#34;removeUser&#34; json:&#34;removeUser&#34;`
+<span id="Permission.AddFunds"></span>    AddFunds           <a href="/pkg/builtin/#bool">bool</a>   `form:&#34;addFunds&#34; json:&#34;addFunds&#34;`
+<span id="Permission.RemoveFunds"></span>    RemoveFunds        <a href="/pkg/builtin/#bool">bool</a>   `form:&#34;removeFunds&#34; json:&#34;removeFunds&#34;`
+<span id="Permission.UserName"></span>    UserName           <a href="/pkg/builtin/#string">string</a> `form:&#34;userName&#34; json:&#34;userName&#34;`
+}</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<h2 id="Transaction">type <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/transaction.go?s=1303:1814#L29">Transaction</a>
+				<a class="permalink" href="#Transaction">&#xb6;</a>
+			</h2>
+			<p>
+Transaction defines information of a Transaction
+</p>
+
+			<pre>type Transaction struct {
+<span id="Transaction.ID"></span>    ID         <a href="/pkg/builtin/#int">int</a>               `form:&#34;id&#34; json:&#34;id&#34;`
+<span id="Transaction.FromID"></span>    FromID     <a href="/pkg/builtin/#int">int</a>               `form:&#34;fromId&#34; json:&#34;fromId&#34;`
+<span id="Transaction.ToID"></span>    ToID       <a href="/pkg/builtin/#int">int</a>               `form:&#34;toId&#34; json:&#34;toId&#34;`
+<span id="Transaction.CurrencyID"></span>    CurrencyID <a href="/pkg/builtin/#int">int</a>               `form:&#34;currencyId&#34; json:&#34;currencyId&#34;`
+<span id="Transaction.Amount"></span>    Amount     <a href="/pkg/builtin/#float64">float64</a>           `form:&#34;amount&#34; json:&#34;amount&#34;`
+<span id="Transaction.Created"></span>    Created    <a href="/pkg/time/">time</a>.<a href="/pkg/time/#Time">Time</a>         `form:&#34;created&#34; json:&#34;created&#34;`
+<span id="Transaction.Completed"></span>    Completed  *<a href="/pkg/time/">time</a>.<a href="/pkg/time/#Time">Time</a>        `form:&#34;completed&#34; json:&#34;completed&#34;`
+<span id="Transaction.Status"></span>    Status     <a href="#TransactionStatus">TransactionStatus</a> `form:&#34;status&#34; json:&#34;status&#34;`
+}</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<h2 id="TransactionStatus">type <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/transaction.go?s=361:390#L7">TransactionStatus</a>
+				<a class="permalink" href="#TransactionStatus">&#xb6;</a>
+			</h2>
+			<p>
+TransactionStatus is the status of the transaction
+</p>
+
+			<pre>type TransactionStatus <a href="/pkg/builtin/#string">string</a></pre>
+
+
+
+				<pre>const (
+
+    <span class="comment">// Approve denotes a transaction&#39;s status as a request to approve</span>
+    <span id="Approve">Approve</span> <a href="#TransactionStatus">TransactionStatus</a> = &#34;approve&#34;
+    <span class="comment">// Approved denotes a transaction&#39;s status as an approved request</span>
+    <span id="Approved">Approved</span> <a href="#TransactionStatus">TransactionStatus</a> = &#34;approved&#34;
+    <span class="comment">// Deny denotes a transaction&#39;s status as a request to deny</span>
+    <span id="Deny">Deny</span> <a href="#TransactionStatus">TransactionStatus</a> = &#34;deny&#34;
+    <span class="comment">// Denied denotes a transaction&#39;s status as a denied request</span>
+    <span id="Denied">Denied</span> <a href="#TransactionStatus">TransactionStatus</a> = &#34;denied&#34;
+    <span class="comment">// New denotes a transaction&#39;s status as a new request</span>
+    <span id="New">New</span> <a href="#TransactionStatus">TransactionStatus</a> = &#34;new&#34;
+)</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<h2 id="User">type <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/user.go?s=1501:1901#L32">User</a>
+				<a class="permalink" href="#User">&#xb6;</a>
+			</h2>
+			<p>
+User defines information of a user
+</p>
+
+			<pre>type User struct {
+<span id="User.ID"></span>    ID        <a href="/pkg/builtin/#int">int</a>    `json:&#34;id&#34;`
+<span id="User.Username"></span>    Username  <a href="/pkg/builtin/#string">string</a> `form:&#34;username&#34; json:&#34;username&#34;`
+<span id="User.Email"></span>    Email     <a href="/pkg/builtin/#string">string</a> `form:&#34;email&#34; json:&#34;email&#34;`
+<span id="User.Password"></span>    Password  <a href="/pkg/builtin/#string">string</a> `form:&#34;password&#34; json:&#34;password&#34;`
+<span id="User.FirstName"></span>    FirstName <a href="/pkg/builtin/#string">string</a> `form:&#34;firstname&#34; json:&#34;firstname&#34;`
+<span id="User.LastName"></span>    LastName  <a href="/pkg/builtin/#string">string</a> `form:&#34;lastname&#34; json:&#34;lastname&#34;`
+<span id="User.RoleID"></span>    RoleID    <a href="/pkg/builtin/#int">int</a>    `form:&#34;role&#34; json:&#34;role&#34;`
+<span id="User.Account"></span>    Account   <a href="/pkg/builtin/#int64">int64</a>  `form:&#34;account&#34; json:&#34;account&#34;`
+}</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<h3 id="User.String">func (User) <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/user.go?s=9787:9816#L355">String</a>
+					<a class="permalink" href="#User.String">&#xb6;</a>
+				</h3>
+				<pre>func (u <a href="#User">User</a>) String() <a href="/pkg/builtin/#string">string</a></pre>
+
+
+
+
+
+
+
+
+			<h2 id="Vault">type <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/models/vault.go?s=952:1238#L26">Vault</a>
+				<a class="permalink" href="#Vault">&#xb6;</a>
+			</h2>
+			<p>
+Vault defines information of a Vault
+</p>
+
+			<pre>type Vault struct {
+<span id="Vault.ID"></span>    ID        <a href="/pkg/builtin/#int">int</a>    `form:&#34;id&#34; json:&#34;id&#34;`
+<span id="Vault.Name"></span>    Name      <a href="/pkg/builtin/#string">string</a> `form:&#34;name&#34; json:&#34;name&#34;`
+<span id="Vault.Owner"></span>    Owner     <a href="/pkg/builtin/#string">string</a> `json:&#34;owner&#34;`
+<span id="Vault.OwnerID"></span>    OwnerID   <a href="/pkg/builtin/#int">int</a>    `form:&#34;ownerID&#34; json:&#34;ownerID&#34;`
+<span id="Vault.AccountID"></span>    AccountID <a href="/pkg/builtin/#int">int</a>    `form:&#34;account&#34; json:&#34;account&#34;`
+<span id="Vault.UserID"></span>    UserID    <a href="/pkg/builtin/#int">int</a>    `form:&#34;userID&#34; json:&#34;userID&#34;`
+}</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.9.1.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="/LICENSE">BSD license</a>.<br>
+<a href="/doc/tos.html">Terms of Service</a> |
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="/lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="/lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="/lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.9.1";</script>
+<script type="text/javascript" src="/lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

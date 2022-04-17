@@ -1,0 +1,15 @@
+tr(data-id=data.ID)  
+    td #{data.ID}
+    td #{data.userName}
+    td #{data.requestTransaction}
+    td #{data.approveTransaction}
+    td #{data.addUser}
+    td #{data.removeUser}
+    td #{data.addFunds}
+    td #{data.removeFunds}
+    td 
+        if myPerms.removeUser==true
+            button.edit-permission.btn.btn-sm.btn-warning.fa.fa-edit(title='edit')
+        if myPerms.removeUser==true
+            button.delete-user.btn.btn-primary.btn-sm.fa.fa-trash-o(title='delete User From Vault')
+                   

@@ -1,0 +1,36 @@
+ul.nav.nav-pills.flex-column
+  li.nav-item
+    a#home-link.nav-link(href='#/home')
+      i.fa.fa-home
+      |  Home
+  li.nav-item
+    a#wallet-link.nav-link(href='#/wallet')
+      i.fa.fa-money
+      |  Wallet
+  li.nav-item
+    a#vaults-link.nav-link(href='#/vaults')
+      i.fa.fa-bank
+      |  Vaults
+  li.nav-item
+    a#favorites-link.nav-link(href='#/favorites')
+      i.fa.fa-comments
+      |  Favorites
+  li.nav-item
+    a#transactions-link.nav-link(href='#/transactions')
+      i.fa.fa-exchange
+      |  Transactions
+  li.nav-item
+    a#marketplace-link.nav-link(href='#/marketplace')
+      i.fa.fa-shopping-cart
+      |  Marketplace
+hr
+ul.nav.nav-pills.flex-column
+  li.nav-item
+    a#profile-link.nav-link(href='#/profile')
+      i.fa.fa-user
+      |  Profile
+  if role == 1
+    li.nav-item
+      a#admin-link.nav-link(href='#/admin')
+        i.fa.fa-user-secret
+        |  Admin

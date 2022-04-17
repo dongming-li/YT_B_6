@@ -1,0 +1,11 @@
+tr(data-id=data.id)
+    td: input.form-control.form-control-sm.col-sm-8(type='text' name='name' value=data.favoriteName placeholder='Name')
+    td #{data.accountId}
+    if tab == "User"
+        td #{data.username.String}
+    if tab == "Vault"
+        td #{data.vaultname.String}
+    td.btn-toolbar.text-center
+        button.update-btn.btn.btn-primary.btn-sm.fa.fa-check(type='button' title='confirm')
+        button.cancel-btn.btn.btn-sm.btn-warning.fa.fa-times(title='cancel')
+        button.delete-btn.btn.btn.-sm.btn-danger.fa.fa-trash(title='delete')

@@ -1,0 +1,67 @@
+h1 Transactions
+.container-fluid
+
+  .row.mb-3
+    .col-4.card
+      .card-block
+        h6.card-title BTC
+        #btc-price.card-text $#{currencies[0]}
+    .col-4.card
+      .card-block
+        h6.card-title ETH
+        #eth-price.card-text $#{currencies[1]}
+    .col-4.card
+      .card-block
+        h6.card-title LTC
+        #ltc-price.card-text $#{currencies[2]}
+
+  .row.mb-3
+    .col-12.card
+      .card-block
+        h4.card-title Send a message to the server
+        form#message-form.form-inline
+          label.sr-only(for='message') Message
+          input#message.form-control.mr-3(type='text' placeholder='Hello World!')
+          button.btn.btn-primary(type='submit') Send
+
+  .row.mb-3
+    .col-12.card
+      .card-block
+        h4.card-title Create Transaction
+        form#transaction-form
+          .form-group.row
+            label.col-3(for='toId') To Account
+            .col-9: select.form-control(name='toId')
+              each account in accounts
+                option(value=account.id)!= account.name
+          .form-group.row
+            label.col-3(for='currencyId') Currency
+            .col-9: select.form-control(name='currencyId')
+              option(value=1) BTC
+              option(value=2) ETH
+              option(value=3) LTC
+              option(value=4) USD
+          .form-group.row
+            label.col-3(for='amount') Amount
+            .col-9: input.form-control(type='number' step='any' name='amount')
+          button#cancel-transaction-create.btn.btn-warning(type='button') Cancel
+          button.btn.btn-primary.float-right(type='submit') Send
+
+  .row
+    .col-12.card
+      .card-block
+        h4.card-title Transaction Requests
+        .table-responsive
+          table.table.table-striped.table-boardered.table-hover
+            thead
+              tr
+                th From
+                th To
+                th Currency
+                th Amount
+                th Created
+                th Options
+            tbody
+              for t in transactions
+                - var data = t
+                include row.jade

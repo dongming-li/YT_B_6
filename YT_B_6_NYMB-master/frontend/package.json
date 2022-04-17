@@ -1,0 +1,15 @@
+{
+  "name": "nymb",
+  "description": "The frontend client adding venmo functionality and more to crypto currencies",
+  "repository": {
+    "type": "gitlab",
+    "url": "https://git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB"
+  },
+  "license": "",
+  "version": "0.0.1",
+  "dependencies": {
+    "spine": "~1.6.1",
+    "jade": "~1.11.0",
+    "stylus": "~0.52.0"
+  }
+}

@@ -1,0 +1,15 @@
+tr(data-id=vInfo.id)  
+    td #{vInfo.id}
+    td 
+        a.moreInfo(href="") #{vInfo.name}
+            
+    td
+        button.showFunds-btn.btn.btn-primary.fa.fa-money(title='show funds')
+            funds
+
+    td
+        if permission.addUser==true
+            button.add-user-btn.btn.btn-primary.fa.fa-user-plus.btn-sm(title='add user to vault')
+        if permission.removeFunds==true
+            button.delete-vault.btn.btn-primary.btn-warning.btn-sm.fa.fa-trash-o(title='delete vault')
+            

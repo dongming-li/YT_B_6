@@ -1,0 +1,35 @@
+if data.constructor.name == 'User'
+  td #{data.id}
+  td: input.form-control.form-control-sm(type='text' name='username' value=data.username placeholder=data.username)
+  td: input.form-control.form-control-sm(type='text' name='email' value=data.email placeholder=data.email)
+  td: input.form-control.form-control-sm(type='text' name='firstname' value=data.firstname placeholder=data.firstname)
+  td: input.form-control.form-control-sm(type='text' name='lastname' value=data.lastname placeholder=data.lastname)
+  td: select.form-control.form-control-sm(name='role')
+    if data.role == 1
+      option(value='1' selected) admin
+      option(value='2') user
+    else
+      option(value='1') admin
+      option(value='2' selected) user
+else if data.constructor.name == 'Vault'
+  td #{data.id}
+  td: input.form-control.form-control-sm(type='text' name='name' value=data.name placeholder=data.name)
+  td #{data.owner}
+else if data.constructor.name == 'Transaction'
+  td #{data.id}
+  td #{data.fromId}
+  td #{data.toId}
+  td #{data.currencyId}
+  td #{data.amount}
+  td #{new Date(data.created).toDateString()}
+  if data.completed
+    td #{new Date(data.completed).toDateString()}
+  else
+    td.font-italic.text-muted pending...
+td.btn-toolbar.text-center
+  .btn-group.mr-1
+    button.update-btn.btn.btn-primary.btn-sm.fa.fa-check(type='button' title='confirm')
+  .btn-group.mr-1
+    button.cancel-btn.btn.btn-sm.btn-warning.fa.fa-times(title='cancel')
+  .btn-group.mr-1
+    button.delete-btn.btn.btn.-sm.btn-danger.fa.fa-trash(title='delete')

@@ -1,0 +1,21 @@
+.modal-dialog(role='document')
+  .modal-content
+    .modal-header
+      h5.modal-title Add Funds
+      button.close(type='button' data-dismiss='modal' aria-label='Close')
+        span(aria-hidden='true') ×
+    form.modal-body
+      .form-group
+        label(for='accountId') Account ID
+        input.form-control(type='int' name='accountId')
+      .form-group
+        label(for='currency') Currency
+        select.form-control(type='number' name='currency')
+          option(value=1 selected) BTC
+          option(value=2) ETH
+          option(value=3) LTC
+          option(value=4) USD
+      .form-group
+        label(for='amount') Amount
+        input.form-control(type='float' name='amount')
+      button.btn.btn-primary(type='submit') Submit

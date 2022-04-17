@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>database - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="/">Go</a></div>
+<a href="#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package database
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+
+
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/database"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+
+
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+
+			</div>
+		</div>
+
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+
+
+
+
+				<dd><a href="#Exec">func Exec(query string, args ...interface{}) (sql.Result, error)</a></dd>
+
+
+				<dd><a href="#Open">func Open(remote bool) error</a></dd>
+
+
+				<dd><a href="#Query">func Query(query string, args ...interface{}) (*sql.Rows, error)</a></dd>
+
+
+				<dd><a href="#QueryRow">func QueryRow(query string, args ...interface{}) (*sql.Row, error)</a></dd>
+
+
+
+				<dd><a href="#Error">type Error</a></dd>
+
+
+
+					<dd>&nbsp; &nbsp; <a href="#Error.Error">func (e Error) Error() string</a></dd>
+
+
+
+			</dl>
+			</div><!-- #manual-nav -->
+
+
+
+
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+
+				<a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/database/database.go">database.go</a>
+
+			</span>
+			</p>
+
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+
+
+
+
+
+			<h2 id="Exec">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/database/database.go?s=1850:1914#L81">Exec</a>
+				<a class="permalink" href="#Exec">&#xb6;</a>
+			</h2>
+			<pre>func Exec(query <a href="/pkg/builtin/#string">string</a>, args ...interface{}) (<a href="/pkg/database/sql/">sql</a>.<a href="/pkg/database/sql/#Result">Result</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+			<p>
+Exec takes a query string and arguments and returns the result
+</p>
+
+
+
+
+
+
+
+			<h2 id="Open">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/database/database.go?s=877:905#L35">Open</a>
+				<a class="permalink" href="#Open">&#xb6;</a>
+			</h2>
+			<pre>func Open(remote <a href="/pkg/builtin/#bool">bool</a>) <a href="/pkg/builtin/#error">error</a></pre>
+			<p>
+Open returns an sql.DB to use in a query
+</p>
+
+
+
+
+
+
+
+			<h2 id="Query">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/database/database.go?s=1270:1334#L56">Query</a>
+				<a class="permalink" href="#Query">&#xb6;</a>
+			</h2>
+			<pre>func Query(query <a href="/pkg/builtin/#string">string</a>, args ...interface{}) (*<a href="/pkg/database/sql/">sql</a>.<a href="/pkg/database/sql/#Rows">Rows</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+			<p>
+Query takes a query string and arguments and returns the query&#39;s result
+</p>
+
+
+
+
+
+
+
+			<h2 id="QueryRow">func <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/database/database.go?s=1614:1680#L73">QueryRow</a>
+				<a class="permalink" href="#QueryRow">&#xb6;</a>
+			</h2>
+			<pre>func QueryRow(query <a href="/pkg/builtin/#string">string</a>, args ...interface{}) (*<a href="/pkg/database/sql/">sql</a>.<a href="/pkg/database/sql/#Row">Row</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+			<p>
+QueryRow expects to return one row from the given query
+</p>
+
+
+
+
+
+
+
+
+			<h2 id="Error">type <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/database/database.go?s=387:456#L9">Error</a>
+				<a class="permalink" href="#Error">&#xb6;</a>
+			</h2>
+			<p>
+Error implements go&#39;s standard error and wraps mysql driver&#39;s error.
+</p>
+
+			<pre>type Error struct {
+<span id="Error.Method"></span>    Method  <a href="/pkg/builtin/#string">string</a>
+<span id="Error.Message"></span>    Message <a href="/pkg/builtin/#string">string</a>
+<span id="Error.Code"></span>    Code    <a href="/pkg/builtin/#uint16">uint16</a>
+}</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<h3 id="Error.Error">func (Error) <a href="/src/git.linux.iastate.edu/309Fall2017/YT_B_6_NYMB/database/database.go?s=458:487#L15">Error</a>
+					<a class="permalink" href="#Error.Error">&#xb6;</a>
+				</h3>
+				<pre>func (e <a href="#Error">Error</a>) Error() <a href="/pkg/builtin/#string">string</a></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.9.1.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="/LICENSE">BSD license</a>.<br>
+<a href="/doc/tos.html">Terms of Service</a> |
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="/lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="/lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="/lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.9.1";</script>
+<script type="text/javascript" src="/lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

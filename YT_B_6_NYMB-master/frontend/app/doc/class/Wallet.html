@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>CoffeeScript API Documentation</title>
+  <script src='../javascript/application.js'></script>
+  <script src='../javascript/search.js'></script>
+  <link rel='stylesheet' href='../stylesheets/application.css' type='text/css'>
+</head>
+  <body>
+    <div id='base' data-path='../'></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='../alphabetical_index.html' title='Index'>
+      Index
+    </a>
+    &raquo;
+    <span class='title'>Wallet</span>
+  </div>
+</div>
+    <div id='content'>
+      <h1>
+        Class:
+        Wallet
+      </h1>
+      <table class='box'>
+        <tr>
+          <td>Defined in:</td>
+          <td>controllers\wallet.coffee</td>
+        </tr>
+        <tr>
+          <td>Inherits:</td>
+          <td>
+            Spine.Controller
+          </td>
+        </tr>
+      </table>
+      <h2>Variables Summary</h2>
+      <dl class='constants'>
+  <dt id='className-variable'>
+    className
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>&#39;wallet&#39;</code></pre>
+    
+  </dd>
+  <dt id='events-variable'>
+    events
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>{
+  &#39;click .option-btn&#39;: &#39;editRow&#39;,
+  &#39;click .update-btn&#39;: &#39;updateBalance&#39;,
+  &#39;click .cancel-btn&#39;: &#39;cancelBalance&#39;,
+  &#39;click .delete-btn&#39;: &#39;deleteBalance&#39;,
+  &#39;click .create-btn&#39;: &#39;createBalance&#39;
+}</code></pre>
+    
+  </dd>
+</dl>
+      <h2>Instance Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#render-dynamic'>
+        #
+(void)
+<b>render</b><span>()</span>
+      </a>
+    </span>
+    <span class='bound note title'>Bound</span>
+    <span class='desc'>
+      renders the wallets page 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#change-dynamic'>
+        #
+(void)
+<b>change</b><span>(params)</span>
+      </a>
+    </span>
+    <span class='bound note title'>Bound</span>
+    <span class='desc'>
+      activates when the wallets page is changed 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#updateTableRows-dynamic'>
+        #
+(void)
+<b>updateTableRows</b><span>(balances)</span>
+      </a>
+    </span>
+    <span class='bound note title'>Bound</span>
+    <span class='desc'>
+      updates the balance table 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#editRow-dynamic'>
+        #
+(void)
+<b>editRow</b><span>(e)</span>
+      </a>
+    </span>
+    <span class='bound note title'>Bound</span>
+    <span class='desc'>
+      edits a balance table row 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#updateBalance-dynamic'>
+        #
+(void)
+<b>updateBalance</b><span>(e)</span>
+      </a>
+    </span>
+    <span class='bound note title'>Bound</span>
+    <span class='desc'>
+      updates a balance 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#cancelBalance-dynamic'>
+        #
+(void)
+<b>cancelBalance</b><span>(e)</span>
+      </a>
+    </span>
+    <span class='bound note title'>Bound</span>
+    <span class='desc'>
+      cancels updates to a balance 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#deleteBalance-dynamic'>
+        #
+(void)
+<b>deleteBalance</b><span>(e)</span>
+      </a>
+    </span>
+    <span class='bound note title'>Bound</span>
+    <span class='desc'>
+      deletes a balance 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#createBalance-dynamic'>
+        #
+(void)
+<b>createBalance</b><span>(e)</span>
+      </a>
+    </span>
+    <span class='bound note title'>Bound</span>
+    <span class='desc'>
+      creates a balance 
+    </span>
+  </li>
+</ul>
+      <h2>Constructor Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='constructor-dynamic'>
+      #
+(void)
+<b>constructor</b><span>()</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>constructs the wallets page</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+</div>
+      <h2>Instance Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='render-dynamic'>
+      #
+(void)
+<b>render</b><span>()</span>
+      <span class='bound note'>Bound</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>renders the wallets page</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='change-dynamic'>
+      #
+(void)
+<b>change</b><span>(params)</span>
+      <span class='bound note'>Bound</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>activates when the wallets page is changed</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='updateTableRows-dynamic'>
+      #
+(void)
+<b>updateTableRows</b><span>(balances)</span>
+      <span class='bound note'>Bound</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>updates the balance table</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='editRow-dynamic'>
+      #
+(void)
+<b>editRow</b><span>(e)</span>
+      <span class='bound note'>Bound</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>edits a balance table row</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='updateBalance-dynamic'>
+      #
+(void)
+<b>updateBalance</b><span>(e)</span>
+      <span class='bound note'>Bound</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>updates a balance</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='cancelBalance-dynamic'>
+      #
+(void)
+<b>cancelBalance</b><span>(e)</span>
+      <span class='bound note'>Bound</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>cancels updates to a balance</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='deleteBalance-dynamic'>
+      #
+(void)
+<b>deleteBalance</b><span>(e)</span>
+      <span class='bound note'>Bound</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>deletes a balance</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='createBalance-dynamic'>
+      #
+(void)
+<b>createBalance</b><span>(e)</span>
+      <span class='bound note'>Bound</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>creates a balance</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+</div>
+    </div>
+    <div id='footer'>
+  By
+  <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
+    Codo
+  </a>
+  2.1.2
+  &#10034;
+  Press H to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/netzpirat' target='_parent'>@netzpirat</a>
+  &#10034;
+  <a href='http://twitter.com/_inossidabile' target='_parent'>@_inossidabile</a>
+</div>
+<iframe id='search_frame'></iframe>
+<div id='fuzzySearch'>
+  <input type='text'>
+  <ol></ol>
+</div>
+<div id='help'>
+  <p>
+    Quickly fuzzy find classes, mixins, methods, file:
+  </p>
+  <ul>
+    <li>
+      <span>T</span>
+      Open fuzzy finder dialog
+    </li>
+  </ul>
+  <p>
+    Control the navigation frame:
+  </p>
+  <ul>
+    <li>
+      <span>L</span>
+      Toggle list view
+    </li>
+    <li>
+      <span>C</span>
+      Show class list
+    </li>
+    <li>
+      <span>I</span>
+      Show mixin list
+    </li>
+    <li>
+      <span>F</span>
+      Show file list
+    </li>
+    <li>
+      <span>M</span>
+      Show method list
+    </li>
+    <li>
+      <span>E</span>
+      Show extras list
+    </li>
+  </ul>
+  <p>
+    You can focus and blur the search input:
+  </p>
+  <ul>
+    <li>
+      <span>S</span>
+      Focus search input
+    </li>
+    <li>
+      <span>Esc</span>
+      Blur search input
+    </li>
+  </ul>
+</div>
+  </body>
+</html>
